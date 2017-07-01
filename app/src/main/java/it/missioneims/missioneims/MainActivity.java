@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -104,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
+
         }
 
         /**
@@ -121,15 +121,42 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            int sectionNumber = this.getArguments().getInt(ARG_SECTION_NUMBER);
+            View rootView;
+            switch(sectionNumber)
+            {
+                case 0: {
+                    rootView = inflater.inflate(R.layout.fragment_webview, container, false);
+                    OpenWebFragment(rootView, "https://www.facebook.com/pg/missioneims/posts/");
+                    break;
+                }
+                case 1:{
+                    rootView = inflater.inflate(R.layout.fragment_webview, container, false);
+                    OpenWebFragment(rootView, "https://www.facebook.com/pg/shoekofficial/posts/");
+                    break;
+                }
+                case 2:{
+                    rootView = inflater.inflate(R.layout.fragment_main, container, false);
+                    TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+                    textView.setText(getString(R.string.section_format, sectionNumber));
+                    break;
+                }
+                default:{
+                    rootView = inflater.inflate(R.layout.fragment_main, container, false);
+                    TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+                    textView.setText(getString(R.string.section_format, sectionNumber));
+                    break;
+                }
+            }
+            return rootView;
+        }
+
+        protected void OpenWebFragment(View rootView, String url) {
             WebView myWebView = (WebView) rootView.findViewById(R.id.webview);
-            myWebView.loadUrl("https://www.facebook.com/pg/missioneims/posts/");
+            myWebView.loadUrl(url);
             myWebView.setWebViewClient(new WebViewClient());
             WebSettings webSettings = myWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
-            return rootView;
         }
     }
 
@@ -138,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
      * one of the sections/tabs/pages.
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
+        public  final int TOTAL_PAGES = 4;
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -147,24 +174,26 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            return PlaceholderFragment.newInstance(position);
         }
 
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return TOTAL_PAGES;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "NEWS";
+                    return getResources().getString(R.string.title_news);
                 case 1:
-                    return "MEMBRI";
+                    return getResources().getString(R.string.title_shoek);
                 case 2:
-                    return "CONTATTI";
+                    return getResources().getString(R.string.title_members);
+                case 3:
+                    return getResources().getString(R.string.title_contacts);
             }
             return null;
         }

@@ -2,4 +2,8 @@
     <string name="app_name">Missione IMS</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_news">NEWS</string>
+    <string name="title_shoek">SHOEK</string>
+    <string name="title_members">TEAM</string>
+    <string name="title_contacts">CONTATTI</string>
 </resources>
