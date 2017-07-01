@@ -6,4 +6,10 @@
     <string name="title_shoek">SHOEK</string>
     <string name="title_members">TEAM</string>
     <string name="title_contacts">CONTATTI</string>
+    <string name="ims_fb_page">I.M.S. Facebook Page</string>
+    <string name="shoek_fb_page">SHOEK Facebook Page</string>
+    <string name="shoek_youtube">SHOEK Youtube Channel</string>
+    <string name="ims_fb_page_smalltext">click here to check our facecbook page</string>
+    <string name="shoek_fb_page_smalltext">click here to check SHOEK\'s facebook page</string>
+    <string name="shoek_youtube_smalltext">click here to check SHOEK\'s youtube channel</string>
 </resources>

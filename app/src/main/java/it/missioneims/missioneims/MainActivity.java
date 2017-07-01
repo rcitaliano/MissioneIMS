@@ -141,6 +141,10 @@ public class MainActivity extends AppCompatActivity {
                     textView.setText(getString(R.string.section_format, sectionNumber));
                     break;
                 }
+                case 3:{
+                    rootView = inflater.inflate(R.layout.fragment_contacts, container, false);
+                    break;
+                }
                 default:{
                     rootView = inflater.inflate(R.layout.fragment_main, container, false);
                     TextView textView = (TextView) rootView.findViewById(R.id.section_label);
