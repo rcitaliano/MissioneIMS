@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
                 case 2:{
-                    rootView = inflater.inflate(R.layout.fragment_main, container, false);
+                    rootView = inflater.inflate(R.layout.fragment_team, container, false);
                     TextView textView = (TextView) rootView.findViewById(R.id.section_label);
                     textView.setText(getString(R.string.section_format, sectionNumber));
                     break;
@@ -178,7 +178,14 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position);
+            switch(position)
+            {
+                default:
+                    return PlaceholderFragment.newInstance(position);
+                case 2:
+                    return MemberFragment.newInstance(3);
+            }
+
         }
 
         @Override
