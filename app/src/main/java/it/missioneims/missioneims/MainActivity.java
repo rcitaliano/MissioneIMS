@@ -184,6 +184,8 @@ public class MainActivity extends AppCompatActivity {
                     return PlaceholderFragment.newInstance(position);
                 case 2:
                     return MemberFragment.newInstance(1);
+                case 3:
+                    return ContactFragment.newInstance(1);
             }
 
         }
