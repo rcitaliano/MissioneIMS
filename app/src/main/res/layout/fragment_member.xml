@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:orientation="vertical">
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:columnCount="2"
+    android:rowCount="2">
 
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_rowSpan="2"
+        android:layout_width="wrap_content"
+        android:minHeight="150dp"
+        android:minWidth="150dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/member_image"
+            android:layout_weight="1" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/member_image"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/member_name"
+        android:layout_row="0"
+        android:layout_column="1"
         android:paddingRight="20dp" />
 
     <TextView
@@ -22,5 +38,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/member_role"
+        android:layout_row="1"
+        android:layout_column="1"
         android:paddingRight="20dp" />
-</LinearLayout>
+</GridLayout>
