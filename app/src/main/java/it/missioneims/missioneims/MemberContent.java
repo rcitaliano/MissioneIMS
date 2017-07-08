@@ -25,21 +25,22 @@ public class MemberContent {
 
     static {
         // Add some sample items.
-        addItem(new MemberItem("image","brenda", "singer"));
-        addItem(new MemberItem("image","dafne", "dancer"));
-        addItem(new MemberItem("image","davide", "musicists"));
-        addItem(new MemberItem("image","fabiana", "photographer"));
-        addItem(new MemberItem("image","francesca", "dancer"));
-        addItem(new MemberItem("image","isidoro", "manager"));
-        addItem(new MemberItem("image","jolanda", "singer"));
-        addItem(new MemberItem("image","julieta", "singer"));
-        addItem(new MemberItem("image","ludovica", "dancer"));
-        addItem(new MemberItem("image","mirko", "dancer"));
-        addItem(new MemberItem("image","miguel", "musicist"));
-        addItem(new MemberItem("image","sandy", "singer"));
-        addItem(new MemberItem("image","thomas", "rapper"));
-        addItem(new MemberItem("image","valeria", "dancer"));
-        addItem(new MemberItem("image","robson", "IT tech"));
+        addItem(new MemberItem(R.drawable.brenda,"brenda", "singer"));
+        addItem(new MemberItem(R.drawable.dafne,"dafne", "dancer"));
+        addItem(new MemberItem(R.drawable.davide,"davide", "musicists"));
+        addItem(new MemberItem(R.drawable.fabiana,"fabiana", "photographer"));
+        addItem(new MemberItem(R.drawable.francesca_anastasio,"francesca", "dancer"));
+        addItem(new MemberItem(R.drawable.isidoro,"isidoro", "manager"));
+        addItem(new MemberItem(R.drawable.jolanda,"jolanda", "singer"));
+        addItem(new MemberItem(R.drawable.julieta,"julieta", "singer"));
+        addItem(new MemberItem(R.drawable.liliana,"liliana", "manager"));
+        addItem(new MemberItem(R.drawable.ludovica,"ludovica", "dancer"));
+        addItem(new MemberItem(R.drawable.mirko,"mirko", "dancer"));
+        addItem(new MemberItem(R.drawable.miguel,"miguel", "musicist"));
+        addItem(new MemberItem(R.drawable.sandy,"sandy", "singer"));
+        addItem(new MemberItem(R.drawable.thomas,"thomas", "rapper"));
+        addItem(new MemberItem(R.drawable.valeria,"valeria", "dancer"));
+        addItem(new MemberItem(R.drawable.robson,"robson", "IT tech"));
     }
 
     private static void addItem(MemberItem item) {

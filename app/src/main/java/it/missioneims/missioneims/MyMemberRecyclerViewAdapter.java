@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -36,7 +37,7 @@ public class MyMemberRecyclerViewAdapter extends RecyclerView.Adapter<MyMemberRe
         holder.mItem = mValues.get(position);
         holder.mNameView.setText(mValues.get(position).member_name);
         holder.mRoleView.setText(mValues.get(position).member_role);
-        holder.mImageView.setText(mValues.get(position).member_image);
+        holder.mImageView.setImageResource(mValues.get(position).member_image);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +59,7 @@ public class MyMemberRecyclerViewAdapter extends RecyclerView.Adapter<MyMemberRe
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         public final TextView mNameView;
-        public final TextView mImageView;
+        public final ImageView mImageView;
         public final TextView mRoleView;
         public MemberItem mItem;
 
@@ -67,7 +68,7 @@ public class MyMemberRecyclerViewAdapter extends RecyclerView.Adapter<MyMemberRe
             mView = view;
             mNameView = (TextView) view.findViewById(R.id.member_name);
             mRoleView = (TextView) view.findViewById(R.id.member_role);
-            mImageView = (TextView) view.findViewById(R.id.member_image);
+            mImageView = (ImageView) view.findViewById(R.id.member_image);
         }
 
         @Override
