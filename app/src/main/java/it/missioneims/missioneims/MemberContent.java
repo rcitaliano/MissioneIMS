@@ -23,24 +23,29 @@ public class MemberContent {
      */
     public static final Map<String, MemberItem> ITEM_MAP = new HashMap<String, MemberItem>();
 
-    private static final int COUNT = 25;
-
     static {
         // Add some sample items.
-        for (int i = 1; i <= COUNT; i++) {
-            addItem(createDummyItem(i));
-        }
+        addItem(new MemberItem("image","brenda", "singer"));
+        addItem(new MemberItem("image","dafne", "dancer"));
+        addItem(new MemberItem("image","davide", "musicists"));
+        addItem(new MemberItem("image","fabiana", "photographer"));
+        addItem(new MemberItem("image","francesca", "dancer"));
+        addItem(new MemberItem("image","isidoro", "manager"));
+        addItem(new MemberItem("image","jolanda", "singer"));
+        addItem(new MemberItem("image","julieta", "singer"));
+        addItem(new MemberItem("image","ludovica", "dancer"));
+        addItem(new MemberItem("image","mirko", "dancer"));
+        addItem(new MemberItem("image","miguel", "musicist"));
+        addItem(new MemberItem("image","sandy", "singer"));
+        addItem(new MemberItem("image","thomas", "rapper"));
+        addItem(new MemberItem("image","valeria", "dancer"));
+        addItem(new MemberItem("image","robson", "IT tech"));
     }
 
     private static void addItem(MemberItem item) {
         ITEMS.add(item);
-        ITEM_MAP.put(item.id, item);
+        ITEM_MAP.put(item.member_name, item);
     }
-
-    private static MemberItem createDummyItem(int position) {
-        return new MemberItem(String.valueOf(position), "Item " + position, makeDetails(position));
-    }
-
     private static String makeDetails(int position) {
         StringBuilder builder = new StringBuilder();
         builder.append("Details about Item: ").append(position);

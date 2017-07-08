@@ -8,18 +8,18 @@ package it.missioneims.missioneims;
  * A dummy item representing a piece of content.
  */
 public class MemberItem {
-    public final String id;
-    public final String content;
-    public final String details;
+    public final String member_name;
+    public final String member_role;
+    public final String member_image;
 
-    public MemberItem(String id, String content, String details) {
-        this.id = id;
-        this.content = content;
-        this.details = details;
+    public MemberItem(String member_image, String member_name, String member_role) {
+        this.member_name = member_name;
+        this.member_role = member_role;
+        this.member_image = member_image;
     }
 
     @Override
     public String toString() {
-        return content;
+        return member_name;
     }
 }

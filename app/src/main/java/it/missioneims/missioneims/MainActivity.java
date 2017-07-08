@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
                 default:
                     return PlaceholderFragment.newInstance(position);
                 case 2:
-                    return MemberFragment.newInstance(3);
+                    return MemberFragment.newInstance(1);
             }
 
         }

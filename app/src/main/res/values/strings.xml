@@ -12,4 +12,6 @@
     <string name="ims_fb_page_smalltext">click here to check our facecbook page</string>
     <string name="shoek_fb_page_smalltext">click here to check SHOEK\'s facebook page</string>
     <string name="shoek_youtube_smalltext">click here to check SHOEK\'s youtube channel</string>
+    <string name="photo">photo</string>
+    <string name="singer">singer</string>
 </resources>
